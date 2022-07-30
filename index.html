@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num_guess;
+        let rd_num = Math.round(Math.random() * 5);
+        let i = 1;
+        do {
+            num_guess = prompt('Nhập số dự đoán:');
+            if (num_guess == rd_num) {
+                alert('Xin chúc mừng. Bạn đã đoán trúng!');
+            } else {
+                if (i < 3) {
+                    alert('Bạn đoán sai rùi. Vui lòng nhập lại');
+                }
+                else {
+                    alert('Bạn lại đoán sai rùi. Bạn không được phép nhập nữa!');
+                }
+            }
+            i++;
+        } while (num_guess != rd_num && i <= 3);
+    </script>
+</body>
+
+</html>
